@@ -1,6 +1,9 @@
 # CodeBook
 
-This is a code book that describes the variables, the data, and any transformations or work that you performed to clean up the data.
+In this codebook we will describe :
+1) The variables.
+2) The data.
+3) Method to clean up the data.
 
 ## The data source
 
@@ -44,21 +47,21 @@ The following files are available for the train and test data. Their description
 - 'train/Inertial Signals/body_gyro_x_train.txt': The angular velocity vector measured by the gyroscope for each window sample. The units are radians/second.
 
 
-## Transformation details
+## Details to Data transformation
 
-There are 5 parts:
+It is done in 5 steps :
 
-1. Merges the training and the test sets to create one data set.
-2. Extracts only the measurements on the mean and standard deviation for each measurement.
-3. Uses descriptive activity names to name the activities in the data set
+1. Create one data set by mergeing the training and the test sets.
+2. For each measurement, extract the measurements on the mean and standard deviation.
+3. Use descriptive activity names to name the activities in the data set
 4. Appropriately labels the data set with descriptive activity names.
-5. Creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+5. Creates an independent tidy data set with the average of each variable for each activity and each subject.
 
-## How ```run_analysis.R``` implements the above steps:
+## ```run_analysis.R``` implementation :
 
-* Require ```reshapre2``` and ```data.table``` librareis.
-* Load both test and train data
-* Load the features and activity labels.
-* Extract the mean and standard deviation column names and data.
-* Process the data. There are two parts processing test and train data respectively.
-* Merge data set.
+1- Install ```reshapre2``` and ```data.table``` librareis.
+2- Load test and train data sets.
+3- Load the features and activity labels.
+4- Extract the mean and standard deviation column names and data.
+5- Process the test and train data.
+6- Merging data sets.
